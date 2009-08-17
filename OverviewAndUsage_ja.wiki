@@ -25,13 +25,20 @@ fakeworker.jsは単純なeval()を用いてワーカを生成し、setTimeout()�
 fakeworker.jsを使って、ワーカをデバッグする手順を簡単に見ていきましょう。
 
 
-1.  デバッガを使用し、ワーカ作成直後にプログラムを一時停止する
+ # デバッガを使用し、ワーカ作成直後にプログラムを一時停止する
 デバッグしたいワーカの生成直後（`new Worker("url")`の呼び出し直後）にブレークポイントを仕掛け、プログラムを一時停止します。
 
-2.  ワーカのソースコードを見つけてブレークポイントを仕掛ける
+<img src="http://fakeworker-js.googlecode.com/hg/doc/pause_program.png">
+
+
+ # ワーカのソースコードを見つけてブレークポイントを仕掛ける
 ワーカのソースコードは、fakeworker.jsがeval()を用いて実行します。Firebugや、Webkit付属のデバッガはeval()で実行されたコードをデバッグする機能を持っていますので、探し出してブレークポイントを設定します。
 
-3.  プログラムを再開する
+<img src="http://fakeworker-js.googlecode.com/hg/doc/select_evaled_code.png"><br>
+<img src="http://fakeworker-js.googlecode.com/hg/doc/add_breakpoint.png">
+
+
+ # プログラムを再開する
 プログラムを再開し、とことんデバッグに励んでください:-)
 
 = fakeworker.jsの制限 =
